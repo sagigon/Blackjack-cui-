@@ -79,9 +79,7 @@ class Blackjack():
                 return self.DRAW if self.__playerHand.isBlackJack() else self.LOSE
             else:
                 return self.WIN if self.__playerHand.isBlackJack()  else self.DRAW 
-            
-            
-    
+                
     @property
     def playerHand(self):
         return self.__playerHand

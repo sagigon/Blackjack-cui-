@@ -35,7 +35,7 @@ class Hand():
             sumScores = [0]
             for card in self.cards:
                 sumScores[0] += card.val if card.val <= 10 else 10 
-            if self.cards[0].val == 1 and sumScores[0] + 10 <= 21:
+            if min(self.cards, key=lambda x: x.val).val == 1 and sumScores[0] + 10 <= 21:
                 sumScores.append(sumScores[0] + 10)
             return sumScores
         else:
